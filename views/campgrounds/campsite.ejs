@@ -90,6 +90,7 @@
                   <h6><%= _review.rating %>/5 </h6> 
                 </p>
                 <p> <b>Review - </b> <%= _review.msg %> </p>
+                <p class="d-flex justify-content-end text-body-secondary"> <%= _review.author.username  %></p>
                 <% if (currentuser && currentuser._id.equals(_review.author._id)) { %>
                   <form action="/campgrounds/<%= campsite._id %>/review/<%= _review.id %>?_method=DELETE " method="POST">
                     <input type="hidden" value="<%= _review.id  %>" name="review_id">
