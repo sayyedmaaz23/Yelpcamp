@@ -17,7 +17,6 @@ module.exports.deleterev=async(req, res)=>{
     const c_id= req.params.id
     const r_id= req.params.reviewid
     const rev = await review.findById(r_id)
-    console.log(rev.author._id)
     if(!rev.author._id.equals(req.user._id)){
         req.flash('error', "You are not authorized!!")
         return res.redirect('/campgrounds')

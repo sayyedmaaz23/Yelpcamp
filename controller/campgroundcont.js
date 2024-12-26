@@ -22,7 +22,6 @@ module.exports.viewsite = async (req, res) => {
             path: 'author'
         }
     }).populate({ path: 'author' });
-    console.log(campsite.review)
     if (!campsite) {
         req.flash('error', 'Campground not found')
         return res.redirect('/campgrounds')

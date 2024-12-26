@@ -23,8 +23,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 
 const multer  = require('multer');
 const { default: helmet } = require("helmet");
-const { url } = require("inspector");
-const db_url ='mongodb://127.0.0.1:27017/yelp_camps'
+// const { url } = require("inspector");
+const db_url=process.env.DB_URL
 // console.log(process.env.DB_URL)
 // 
 mongoose.connect(db_url);

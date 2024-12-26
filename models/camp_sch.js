@@ -57,7 +57,6 @@ camp_sch.virtual('properties.popUpMarkup').get(function () {
 camp_sch.post('findOneAndDelete', async function (doc) {
     
     if(doc.review){
-        console.log(doc.review)
         try{
             await Review.deleteMany({
                 _id:{$in: doc.review}
