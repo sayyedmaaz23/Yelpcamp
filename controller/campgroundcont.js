@@ -69,7 +69,6 @@ module.exports.newformfunc = async (req, res) => {
     const newsite = new Camp(req.body.campground);
     newsite.geometry = geoData.features[0].geometry;
     newsite.images = req.files.map(f => ({ url: f.path, imgname: f.filename }))
-    console.log(newsite.images)
     newsite.author = req.user._id;
     await newsite.save();
     req.flash('success', 'Successfully created!!');

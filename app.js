@@ -98,7 +98,7 @@ const sessionconfig = {
     mongoUrl: db_url,
     ttl: 14 * 24 * 60 * 60 
   }),
-  secret:process.env.SESSION_SECRET,
+  secret:'thisisasecret',
   resave: false,
   saveUninitialized: true,
   // secure:true,
