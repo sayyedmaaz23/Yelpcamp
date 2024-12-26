@@ -1,0 +1,38 @@
+<% layout('/layout/boilerplate') %>
+
+    <div class="row">
+            <h2 class="text-center">New Camp</h2>
+            <div class="col-6 offset-3">
+                <form action="/campgrounds" method="post" enctype="multipart/form-data" class="validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="campground[title]">Title</label>
+                        <input class="form-control" type="text" name="campground[title]" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="campground[location]">Location</label>
+                        <input class="form-control" type="text" name="campground[location]" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image">Image</label>
+                        <input class="form-control" type="file" name="image" multiple required>
+                    </div>
+                    
+                    <!-- <div class="mb-3">
+                        <label class="form-label" for="campground[image]">Image URL</label>
+                        <input class="form-control" type="text" name="campground[image]" required>
+                    </div> -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="campground[price]" placeholder="0.00" required>
+                      </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="campground[description]">Description</label>
+                        <textarea class="form-control" type="text" name="campground[description]" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Add</button>
+                    <a href="/campgrounds" class="btn btn-dark"> Cancel </a>
+                </form>
+                
+            </div>
+    </div>
+        
